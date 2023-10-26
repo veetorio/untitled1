@@ -1,14 +1,14 @@
-package org.example;
+package org.example.models;
 
 
 import javax.persistence.Entity;
 
-import javax.persistence.GeneratedValue;
+
 import javax.persistence.Id;
 import javax.persistence.Transient;
 
 @Entity
-public class produtos {
+public class Produtos {
     @Id
     private int id;
 
@@ -16,9 +16,10 @@ public class produtos {
     private String nome;
     private double preco;
 
-    public produtos(String _nome,double _preco){
+    public Produtos(int _id,String _nome,double _preco){
         this.nome = _nome;
         this.preco = _preco;
+        this.id = _id;
     }
 
     public double getPreco() {
