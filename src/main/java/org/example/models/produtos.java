@@ -1,25 +1,30 @@
 package org.example.models;
 
 
+import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
-
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Transient;
 
 @Entity
 public class Produtos {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Transient
     private String nome;
+
     private double preco;
 
-    public Produtos(int _id,String _nome,double _preco){
+    public Produtos(){
+    }
+    public Produtos(String _nome,double _preco){
         this.nome = _nome;
         this.preco = _preco;
-        this.id = _id;
     }
 
     public double getPreco() {

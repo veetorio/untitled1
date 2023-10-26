@@ -9,7 +9,7 @@ import javax.persistence.Persistence;
 public class requisição {
     public static void main(String[] args) {
         ControllerProdutos a = new ControllerProdutos("/init");
-
+                                         
         
 
   
